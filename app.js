@@ -50,11 +50,14 @@
 class GroceryListItem extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+    }
   }
-
   render() {
     return (
-      <li>{this.props.item}</li>
+      <div>
+        <li>{this.props.item}</li>
+      </div>
     );
   }
 }
@@ -75,3 +78,20 @@ var App = () => (
 );
 
 ReactDOM.render(<App />, document.getElementById("app"));
+
+
+//Static
+const Profile = (props) => {
+  return (
+    <div>
+      <li>{th.props.item}</li>
+    </div>
+  );
+}
+
+  //when using arrow function, don't need to return when using parenthesis. It will automaticlaly return
+const Profile = (props) => (
+    <div>
+      <li>{th.props.item}</li>
+    </div>
+)
